@@ -1,0 +1,4 @@
+Hostname, OS, Distribution, Version, Domain Name, RAM, SDA Disk Size, Architecture, Cores, IP, MAC, Python Version
+{% for host in groups['all'] %}
+{{ hostvars[host]['ansible_facts']['hostname'] }}, {{ hostvars[host]['ansible_facts']['os_family'] }}, {{ hostvars[host]['ansible_facts']['distribution'] }}, {{ hostvars[host]['ansible_facts']['distribution_version'] }}, {{ hostvars[host]['ansible_facts']['domain'] | default('NONE') }}, {{ hostvars[host] ['ansible_facts']['memtotal_mb'] }}MB, {{ hostvars[host]['ansible_facts']['devices']['sda']['size'] }}, {{ hostvars[host]['ansible_facts']['architecture'] }},{{ hostvars[host]['ansible_facts']['processor_count'] }}, {{ hostvars[host]['ansible_facts']['eth1']['ipv4']['address'] }}, {{ hostvars[host].ansible_default_ipv4.macaddress }}, {{ hostvars[host]['ansible_facts']['python_version'] }}
+{% endfor %}

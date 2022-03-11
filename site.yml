@@ -1,0 +1,5 @@
+---
+- name: Generate report for devices
+  hosts: all
+  roles:
+    - report
