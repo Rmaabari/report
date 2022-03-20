@@ -1,0 +1,9 @@
+Ansible-Tower 
+
+Roles:
+Report - Adds all participant details to a file called /etc/ myhosts
+Deployment - Deploy sets of packages
+
+Roles/Playbooks path = /var/lib/awx/projects/
+
+
