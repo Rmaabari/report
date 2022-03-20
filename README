@@ -1,9 +1,17 @@
+Hosts:
+
+Test VM hosts:
+vmltest-01
+vmltest-02
+
 Ansible-Tower 
 
 Roles:
 Report - Adds all participant details to a file called /etc/ myhosts
 Deployment - Deploy sets of packages
+ 
+Ansible-Tower UI Roles/Playbooks path = /var/lib/awx/projects/
 
-Roles/Playbooks path = /var/lib/awx/projects/
+* Each role has an ansible.cfg file which posses inventory file and default user to connect when running each playbook (mechanic)
 
 
